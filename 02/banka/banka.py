@@ -29,7 +29,7 @@ import argparse
 
 def get_balance(account_number):
     try:
-        with open (str(account_number)) as file:
+        with open(str(account_number)) as file:
             balance = int(file.read())
             return balance  
     except FileNotFoundError:

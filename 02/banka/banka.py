@@ -45,13 +45,13 @@ def transfer_amount(from_account_number, to_account_number, amount):
     balance_to =  get_balance(to_account_number)
 
     if from_account_number == to_account_number:
-        raise ValueError("Účet příjemce a odesílatele nesmí být stejný.")
+        exit("Chyba: Účet příjemce a odesílatele nesmí být stejný.")
     
     if amount <= 0:
-        raise ValueError("Lze zadat pouze kladnou částku.")
+        exit("Chyba: Lze zadat pouze kladnou částku.")
 
     if balance_from < amount: 
-        raise ValueError("Na účtě není dostatek peněz.")
+        exit("Chyba: Na účtě není dostatek peněz.")
     
     balance_from -= amount 
     update_balance(from_account_number, balance_from)

@@ -23,3 +23,51 @@
 #
 # Pro tento pokročilý způsob je však třeba použít pokročilou knihovnu pro práci
 # s parametry příkazové řádky, jako např. argparse nebo click.
+
+
+import argparse 
+
+def get_balance(account_number):
+    try:
+        with open(str(account_number)) as file:
+            balance = int(file.read())
+            return balance  
+    except FileNotFoundError:
+        exit(f"Chyba: Účet s číslem {account_number} neexistuje.")
+
+def update_balance(account_number, amount):
+    with open(str(account_number), "w") as file: 
+        file.write(str(amount))
+   
+def transfer_amount(from_account_number, to_account_number, amount):
+    amount = int(amount)
+    balance_from = get_balance(from_account_number)
+    balance_to =  get_balance(to_account_number)
+
+    if from_account_number == to_account_number:
+        exit("Chyba: Účet příjemce a odesílatele nesmí být stejný.")
+    
+    if amount <= 0:
+        exit("Chyba: Lze zadat pouze kladnou částku.")
+
+    if balance_from < amount: 
+        exit("Chyba: Na účtě není dostatek peněz.")
+    
+    balance_from -= amount 
+    update_balance(from_account_number, balance_from)
+    balance_to += amount
+    update_balance(to_account_number, balance_to) 
+
+parser = argparse.ArgumentParser() 
+parser.add_argument("--from", type=int, required=True, dest="from_account")
+parser.add_argument("--to", type=int, required=True, dest="to_account")
+parser.add_argument("--amount", type=int, required=True, dest="amount")
+ 
+arguments = parser.parse_args() 
+
+from_account_number = arguments.from_account
+to_account_number = arguments.to_account
+amount = arguments.amount  
+
+transfer_amount(from_account_number, to_account_number, amount)
+print(f"Úspěšně převedeno {amount} z účtu {from_account_number} na účet {to_account_number}.")

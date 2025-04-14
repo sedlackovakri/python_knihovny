@@ -1,0 +1,47 @@
+Předčíslí u čísla účtu:(\d{,6}-)?\d{6,10}/\d{4}
+2300117015/2010
+100001-2300117015/2010
+222-2300117015/2010
+
+Číslo účtu podruhé:^[12][0-2]\d{4,8}/2100
+1000117015/2100
+2100117015/2100
+2300117015/2100
+6300117015/2100
+417015/2100
+
+Registrační značka:\d[A-Z][A-Z\d] \d{4}
+4A6 8244
+6B2 6635
+2AD 3824
+7C1 5025
+
+AC8 5484
+924 1541
+8A2 25C2
+3P 4564
+1A 25364
+
+Telefonní číslo: ((\+|00)420 ?)?(\d{3} ?){3}
+602333555
+602 333 555
++420602333555
++420 602 333 555
+00420 602 333 555
+
+Ministerstva: Ministerstvo [\w ]+
+Ministerstvo pro místní rozvoj, Celní správa České republiky, Ministerstvo životního prostředí, Ministerstvo práce a sociálních věcí, Český statistický úřad, Nejvyšší kontrolní úřad
+
+Slavný soude:\d{1,2} [A-Z]{1,3} \d{1,4}/\d{4}
+63 C 397/2014
+
+Ave, Caesar!:[IVX]+\.?
+IX. století
+Matematika pro VII. třídu
+Star Trek III
+Karel IV.
+papež Benedict V.
+Bělá je X. část statutárního města Děčín.
+III. patro
+II. stupeň povodňové aktivity
+Konstantin XI. Dragases

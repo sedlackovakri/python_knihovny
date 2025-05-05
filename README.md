@@ -15,7 +15,7 @@ Repozitář k navazujícímu kurzu Pythonu
 |    09 | 2025-04-14 | Martin | 2:30 h | [Regulární výrazy][regexp]               |
 |       | 2025-04-21 |        |        | Velikonční pondělí                       |
 |    10 | 2025-04-28 | Luděk  | 2:30 h | [API][api]                               |
-|    11 | 2025-05-05 | Luděk  | 2:30 h | Webscraping (Selenium)                   |
+|    11 | 2025-05-05 | Luděk  | 2:30 h | [Web scraping][webscraping]              |
 |    12 | 2025-05-12 | ???    |        | ???                                      |
 |    13 | 2025-05-19 | Luděk  | 2:30 h | Vizualizace                              |
 
@@ -26,6 +26,7 @@ Repozitář k navazujícímu kurzu Pythonu
 [gh]: https://github.com/PyLadiesCZ-Brno/python-knihovny/tree/main/06#readme
 [sql]: https://dta-sql.streamlit.app/
 [api]: https://dta-api.streamlit.app/
+[webscraping]: https://dta-scraping.streamlit.app/
 
 ## Odevzdávání úkolů
 
